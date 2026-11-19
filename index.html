@@ -10,21 +10,27 @@
 
 <body>
 
-<main class="app">
-<p class="eyebrow"> 改三次了我痛苦</p>
-<h1> 終極密碼 </h1>
-<p> 目前可猜範圍 </p>
-<div id="range" class="range">1 ～ 100</div>
-<div class="field">
-<label for="guess"> 請輸入範圍內的整數 </label>
-<input id="guess" type="number">
-</div>
-<div class="button-row">
-<button id="guess-button"> 送出答案 </button>
-<button id="reset-button" class="secondary"> 重新開始 </button>
-</div>
-<p id="message" class="message"> 請輸入第一個數字 </p>
-<p id="attempts" class="stats"> 已猜 0 次 </p>
+<main>
+    
+<form id="payment-form" novalidate>
+
+  <label for="card-number">測試卡號</label>
+  <input id="card-number" inputmode="numeric">
+  <small id="card-error"></small>
+
+  <label for="expiry">有效期限 MM/YY</label>
+  <input id="expiry" placeholder="12/29">
+
+  <label for="cvv">安全碼</label>
+  <input id="cvv" inputmode="numeric">
+
+  <label for="amount">金額</label>
+  <input id="amount" type="number">
+
+  <button>模擬付款</button>
+
+</form>
+
 </main>
 
 </body>
