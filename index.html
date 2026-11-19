@@ -3,33 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JavaScript 練習 </title>
+<title>模擬刷卡表單 </title>
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<main class=".payment-card">
-<p class="eyebrow"> 模擬刷卡</p>
-<h1>  </h1>
+<main class="payment-card">
+    <p class="eyebrow">W12 基本表單</p>
+    <h1>模擬刷卡</h1>
 
 <form id="payment-form" novalidate>
 
-  <label for="card-number">測試卡號</label>
-  <input id="card-number" inputmode="numeric">
-  <small id="card-error"></small>
+<div class="field">
+        <label for="card-number">測試卡號</label>
+        <input id="card-number" inputmode="numeric" placeholder="1234 5678 1234 5670">
+        <small class="error"></small>
+      </div>
 
-  <label for="expiry">有效期限 MM/YY</label>
-  <input id="expiry" placeholder="12/29">
+      <div class="field-row">
+        <div class="field">
+          <label for="expiry">有效期限 MM/YY</label>
+          <input id="expiry" placeholder="12/29">
+          <small class="error"></small>
+        </div>
 
-  <label for="cvv">安全碼</label>
-  <input id="cvv" inputmode="numeric">
+        <div class="field">
+          <label for="cvv">安全碼</label>
+          <input id="cvv" inputmode="numeric" placeholder="123">
+          <small class="error"></small>
+        </div>
+      </div>
 
-  <label for="amount">金額</label>
-  <input id="amount" type="number">
+      <div class="field">
+        <label for="amount">付款金額</label>
+        <input id="amount" type="number" placeholder="850">
+        <small class="error"></small>
+      </div>
 
-  <button>模擬付款</button>
+      <button type="submit">模擬付款</button>
+      <p id="result" class="result" aria-live="polite">等待檢查</p>
+
 
 </form>
 
